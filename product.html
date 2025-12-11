@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Ecomall Product Page</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 shadow-xl bg-white text-gray-900">
+        <div class="flex items-center justify-between px-6 py-6 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2">
+                <img src="https://demo.theme-sky.com/ecomall/wp-content/themes/ecomall/images/logo.png" alt="Logo"
+                    class="h-12 w-auto object-contain">
+            </div>
+
+            <div class="hidden md:flex flex-1 px-6">
+                <div class="w-full relative">
+                    <input type="text" class="cursor-pointer w-full py-2.5 pl-4 pr-10 rounded-full bg-gray-100 text-gray-800 shadow-sm text-base 
+         focus:outline-none 
+         focus:border-blue-500 focus:ring-2 focus:ring-blue-400" placeholder="Search for products..." />
+                    <i class="fa-solid fa-magnifying-glass absolute cursor-pointer right-4 top-3 text-gray-500"></i>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4 md:space-x-6 text-xl">
+                <button class="relative hover:text-yellow-500 transition-colors duration-300 likeCart">
+                    <i class="fa-regular fa-heart"></i>
+                    <span
+                        class="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center bg-yellow-400 text-black text-[10px] rounded-full font-bold header-like-count">0</span>
+                </button>
+
+                <button class="relative hover:text-yellow-500 transition-colors duration-300 addCart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span
+                        class="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center bg-yellow-400 text-black text-[10px] rounded-full font-bold cart-count">0</span>
+                </button>
+
+                <div class="relative hidden md:block group">
+                    <button
+                        class="flex items-center gap-2 bg-gray-200 px-4 py-2 rounded-full text-base hover:bg-gray-300 transition-colors duration-300">
+                        <span class="h-8 w-8 flex items-center justify-center bg-indigo-700 rounded-full text-white">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <span class="name hidden sm:inline text-gray-900 font-medium">Username</span>
+                        <i
+                            class="fa-solid fa-chevron-down text-sm transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+
+                    <div class="absolute right-0 mt-3 w-48 bg-white text-gray-900 rounded-lg shadow-lg py-2 text-base
+           opacity-0 invisible group-hover:opacity-100 group-hover:visible
+           transition-all duration-300">
+                        <div class="px-4 pb-2 border-b border-gray-200">
+                            <p class="font-bold text-gray-900 user">Hi, User</p>
+                            <p class="text-sm text-gray-500 email">user@example.com</p>
+                        </div>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+                        <a href="login.html" class="block px-4 py-2 hover:bg-gray-100">Login</a>
+                        <a href="#" class="logout block px-4 py-2 text-red-600 hover:bg-red-100">Logout</a>
+                    </div>
+                </div>
+
+                <button id="menuToggle" class="text-3xl md:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="border-t border-gray-300 bg-white">
+            <ul class="hidden md:flex items-center justify-center gap-7 py-3 text-lg font-normal max-w-7xl mx-auto">
+                <li><a href="home.html" class="hover:font-bold transition-colors duration-300">Home</a></li>
+                <li class="relative group inline-block">
+                    <button class="px- py-3 flex items-center hover:font-bold font-normal rounded-lg transition group">
+                        Products
+                        <span class="">
+                            <i
+                                class="fa-solid fa-chevron-down text-sm flex transition-transform duration-300 group-hover:rotate-180 ml-2"></i>
+                        </span>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg opacity-0 invisible
+                  group-hover:opacity-100 group-hover:visible transition-all duration-500">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:font-bold">Speakers</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:font-bold">Earbuds</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:font-bold">Headphones</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:font-bold">Watches</a>
+                    </div>
+                </li>
+                <li><a href="#" class="hover:font-bold transition-colors duration-500">Pages</a></li>
+                <li><a href="#" class="hover:font-bold transition-colors duration-500">About</a></li>
+                <li><a href="#" class="hover:font-bold transition-colors duration-500">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu -->
+            <ul id="mobileMenu" class="md:hidden hidden flex-col px-5 py-3 text-lg text-gray-900 space-y-2">
+                <!-- 
+      <input type="text" class="cursor-pointer px-3 py-2 rounded-full bg-gray-100 text-gray-800 shadow-sm text-base 
+         focus:outline-none w-full
+         focus:border-blue-500 focus:ring-2 focus:ring-blue-400" placeholder="Search..." /> -->
+                <li class="w-full relative">
+                    <input type="text" class="cursor-pointer w-full py-2.5 pl-4 pr-10 rounded-full bg-gray-100 text-gray-800 shadow-sm text-base 
+         focus:outline-none 
+         focus:border-blue-500 focus:ring-2 focus:ring-blue-400" placeholder="Search for products..." />
+
+                    <i class="fa-solid fa-magnifying-glass absolute cursor-pointer right-4 top-3 text-gray-500"></i>
+                </li>
+
+                <li><a href="home.html" class="block py-2 hover:text-blue-600">Home</a></li>
+
+
+                <!-- Mobile Products Dropdown -->
+                <li>
+                    <button id="mobileProductsBtn"
+                        class="flex w-full justify-between items-center py-2 font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                        Products <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div id="mobileProductsMenu" class="hidden pl-4 flex flex-col space-y-1">
+                        <a href="product.html" class="block hover:text-blue-600 py-1">All Products</a>
+                        <a href="#" class="block hover:text-blue-600 py-1">New Arrivals</a>
+                        <a href="#" class="block hover:text-blue-600 py-1">Best Sellers</a>
+                        <a href="#" class="block hover:text-blue-600 py-1">Sale</a>
+                    </div>
+                </li>
+
+                <li><a href="#" class="block py-2 hover:text-blue-600">Pages</a></li>
+                <li><a href="#" class="block py-2 hover:text-blue-600">About</a></li>
+                <li><a href="#" class="block py-2 hover:text-blue-600">Contact</a></li>
+
+                <!-- Mobile User Menu -->
+                <li>
+                    <button id="mobileUserBtn"
+                        class="flex w-full justify-between items-center py-2 font-semibold hover:text-blue-600 text-gray-900 transition-colors duration-300">
+                        Profile <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div id="mobileUserMenu" class="hidden pl-4 flex flex-col space-y-1">
+                        <a href="#" class="block py-1 hover:text-blue-600 user">Username</a>
+                        <a href="login.html" class="block hover:text-blue-600 py-1">Login</a>
+                        <a href="#" class="block py-1 text-red-600 hover:text-blue-600 logout">Logout</a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <div class="max-w-7xl mx-auto p-10">
+        <h1 class="text-4xl text-center font-extrabold tracking-tight">
+            Our <span class="text-blue-600 underline">Products</span>
+        </h1>
+    </div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="max-w-7xl mx-auto p-10 bg-white rounded-2xl shadow-lg">
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+
+            <!-- SIDEBAR -->
+            <div class="md:col-span-3 flex flex-col gap-5">
+
+                <!-- Search + Category + Sort -->
+                <div class="bg-white p-5 rounded-2xl shadow border flex flex-col gap-4">
+
+                    <!-- Search Box -->
+                    <div class="relative w-full">
+                        <input type="text" id="searchBox"
+                            class="w-full py-3 pl-4 pr-12 rounded-full bg-gray-100 border border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-300 focus:border-blue-500"
+                            placeholder="Search for products..." />
+                        <i class="fa-solid fa-magnifying-glass absolute right-4 top-3.5 text-gray-600"></i>
+                    </div>
+
+                    <!-- Category Dropdown -->
+                    <select id="categoryDropdown"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 shadow focus:ring-2 focus:ring-blue-300"
+                        onchange="filterCategory(this.value)">
+                        <option value="all">All Categories</option>
+                        <option value="headphones">Headphones</option>
+                        <option value="earbuds">Earbuds</option>
+                        <option value="smart watches">Smart Watches</option>
+                        <option value="speakers">Speakers</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+
+                    <!-- Sort Dropdown -->
+                    <select id="sortSelect"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 shadow focus:ring-2 focus:ring-blue-300">
+                        <option value="">Sort By</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div class="md:col-span-9">
+                <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+                <!-- 
+                <div class="flex justify-center mt-10">
+                    <button id="addProduct"
+                        class="bg-green-600 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all duration-300">
+                        Add More Products
+                    </button>
+                </div> -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="header.js"></script>
+    <script>
+        let products = [];
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+        // DOM Elements
+        const productsContainer = document.getElementById("products-container");
+        const searchBox = document.getElementById("searchBox");
+        const categoryDropdown = document.getElementById("categoryDropdown");
+        const sortSelect = document.getElementById("sortSelect");
+        const cartCountEl = document.querySelector(".cart-count");
+        const likeCountEl = document.querySelector(".header-like-count");
+
+        // Initial Setup
+        cartCountEl.innerText = cart.length;
+        likeCountEl.innerText = wishlist.length;
+
+        // Fetch Products
+        fetch("http://localhost:3000/products")
+            .then(res => res.json())
+            .then(data => {
+                products = data;
+                renderProducts(products);
+            })
+            .catch(err => console.log("Fetch Error:", err));
+
+        // Render Products
+        function renderProducts(items) {
+            productsContainer.innerHTML = "";
+
+            items.forEach(product => {
+                const inCart = cart.some(item => String(item.id) === product.id);
+                const liked = wishlist.includes(String(product.id));
+
+                const card = document.createElement("div");
+                card.className = "bg-white rounded-2xl shadow-md border hover:shadow-xl group overflow-hidden";
+
+                card.innerHTML = `
+      <div class="relative h-65 w-full overflow-hidden bg-gray-100">
+        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        <button class="absolute top-3 right-3 w-10 h-10 flex items-center justify-center
+                       bg-white/80 backdrop-blur-md rounded-full shadow like-btn transition" >
+          <i class="fa-heart text-xl cursor-pointer transition-all duration-300 ${liked ? 'fa-solid text-red-600 liked' : 'fa-regular'}" data-id="${product.id}"></i>
+        </button>
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold text-lg text-gray-800 mb-1">${product.title}</h3>
+        <p class="text-gray-500 text-sm mb-1">Brand: <span class="font-medium">${product.brand}</span></p>
+        <p class="text-gray-500 text-sm mb-1">Category: <span class="font-medium capitalize">${product.category}</span></p>
+        <p class="text-yellow-500 text-sm font-semibold mb-1">⭐ ${product.rating} / 5</p>
+        <p class="text-blue-600 font-semibold text-xl mb-3">₹${product.price}</p>
+        <p class="text-gray-500 text-sm line-clamp-2 mb-4">${product.description}</p>
+      </div>
+    `;
+
+                productsContainer.appendChild(card);
+            });
+        }
+
+        // Filter Function
+        function filterProducts() {
+            let query = searchBox.value.toLowerCase();
+            let category = categoryDropdown.value.toLowerCase();
+            let sorted = [...products];
+
+            // Search + Category
+            let filtered = sorted.filter(p =>
+                (p.title.toLowerCase().includes(query) || p.category.toLowerCase().includes(query)) &&
+                (category === "all" || p.category.toLowerCase() === category)
+            );
+
+            // Sorting
+            const sortVal = sortSelect.value;
+            if (sortVal === "low-high") filtered.sort((a, b) => a.price - b.price);
+            else if (sortVal === "high-low") filtered.sort((a, b) => b.price - a.price);
+            else if (sortVal === "newest") filtered.sort((a, b) => b.id - a.id);
+
+            renderProducts(filtered);
+        }
+
+        // Event Listeners
+        searchBox.addEventListener("input", filterProducts);
+        categoryDropdown.addEventListener("change", filterProducts);
+        sortSelect.addEventListener("change", filterProducts);
+
+        productsContainer.addEventListener("click", e => {
+
+            // Like/Unlike
+            // const heart = e.target.closest(".like-btn i");
+            const heart = e.target.closest("i[data-id]");
+
+            if (heart) {
+                toggleLike(heart);
+                return;
+            }
+        });
+
+
+
+        // Like/Unlike Function
+        function toggleLike(heart) {
+            // const productId = String(heart.closest(".group").querySelector(".add-to-cart-btn").dataset.id);
+            const productId = heart.dataset.id;
+
+            if (!localStorage.getItem("Username")) {
+                alert("Login First!");
+                window.location.href = "login.html";
+                return;
+            }
+
+
+            if (!heart.classList.contains("liked")) {
+                heart.classList.remove("fa-regular");
+                heart.classList.add("fa-solid", "text-red-600", "liked");
+                wishlist.push(productId);
+            } else {
+                heart.classList.remove("fa-solid", "text-red-600", "liked");
+                heart.classList.add("fa-regular");
+                wishlist = wishlist.filter(id => id !== productId);
+            }
+
+            likeCountEl.innerText = wishlist.length;
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        }
+
+        // Redirect Card
+        document.querySelector(".addCart").addEventListener("click", () => {
+            window.location.href = "cart_display.html";
+        });
+
+        // Redirect wishlist
+        document.querySelector(".likeCart").addEventListener("click", () => {
+            window.location.href = "wishlist.html";
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Wireless Bluetooth Headphone",
+      "category": "Headphones",
+      "brand": "Boat",
+      "image": "https://www.boat-lifestyle.com/cdn/shop/products/main2_b66dce6b-710d-49cb-9d1c-2bc8c9c0ab15_600x.png?v=1645698328",
+      "price": 1999,
+      "rating": 4.5,
+      "quantity": 1,
+      "description": "High bass wireless headphone with 20 hours battery backup."
+    },
+    {
+      "id": "2",
+      "title": "Noise Cancelling Headphone",
+      "category": "Headphones",
+      "brand": "Sony",
+      "image": "https://down-my.img.susercontent.com/file/69d3057d808bec67baf9a71bb177bee2",
+      "price": 4999,
+      "rating": 4.8,
+      "quantity": 1,
+      "description": "Premium ANC headphone with deep bass and fast charging support."
+    },
+    {
+      "id": "3",
+      "title": "True Wireless Earbuds",
+      "category": "Earbuds",
+      "brand": "Realme",
+      "image": "https://img-prd-pim.poorvika.com/product/realme-buds-t110-true-wireless-black-front-view.png",
+      "price": 1299,
+      "rating": 4.3,
+      "quantity": 1,
+      "description": "Lightweight earbuds with 10mm drivers & clear calling mic."
+    },
+    {
+      "id": "4",
+      "title": "Bass Boost Earbuds",
+      "category": "Earbuds",
+      "brand": "Boat",
+      "image": "https://www.boat-lifestyle.com/cdn/shop/files/Blue_1_5aebaaa1-5d04-4a6b-9c86-e7ca274489ed_600x.png?v=1694426331",
+      "price": 1499,
+      "rating": 4.4,
+      "quantity": 1,
+      "description": "Deep bass earbuds with 40 hours of playtime and ENC mic."
+    },
+    {
+      "id": "5",
+      "title": "Smart Fitness Watch",
+      "category": "Smart Watches",
+      "brand": "Noise",
+      "image": "https://www.gonoise.com/cdn/shop/files/1_c95e5561-4f66-413d-b143-42d31821e554.webp?v=1721392308",
+      "price": 2499,
+      "rating": 4.2,
+      "quantity": 1,
+      "description": "Fitness watch with SpO2, heart rate monitor & 7-day battery."
+    },
+    {
+      "id": "6",
+      "title": "Amoled Smart Watch",
+      "category": "Smart Watches",
+      "brand": "Fire-Boltt",
+      "image": "https://www.fireboltt.com/cdn/shop/files/phoenix-amoled-ultra-ace-black_1_400x.png?v=1693887757",
+      "price": 2999,
+      "rating": 4.5,
+      "quantity": 1,
+      "description": "1.78 inch AMOLED display & Bluetooth calling support."
+    },
+    {
+      "id": "7",
+      "title": "Portable Bluetooth Speaker",
+      "category": "Speakers",
+      "brand": "JBL",
+      "image": "https://tse1.mm.bing.net/th/id/OIP.cU_LIV6wspTeamG4Pfdd7AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "price": 2499,
+      "rating": 4.6,
+      "quantity": 1,
+      "description": "power into the appropriate voltage and current to recharge a battery. like phones and laptops, and is regulated ."
+    },
+    {
+      "id": "8",
+      "title": "Mini Wireless Speaker",
+      "category": "Speakers",
+      "brand": "Boat",
+      "image": "https://www.boat-lifestyle.com/cdn/shop/files/Artboard5_44d335da-dfc3-4619-9e17-dbbd6a5162ad_1800x.png?v=1747114990",
+      "price": 1599,
+      "rating": 4.4,
+      "quantity": 1,
+      "description": "Compact wireless speaker with punchy bass."
+    },
+    {
+      "id": "9",
+      "title": "Fast Charging Adapter",
+      "category": "Accessories",
+      "brand": "Samsung",
+      "image": "https://m.media-amazon.com/images/I/51wI3ihMKsL.jpg",
+      "price": 799,
+      "rating": 4.3,
+      "quantity": 1,
+      "description": "25W fast charger with Type-C cable support."
+    },
+    {
+      "id": "10",
+      "title": "Type-C Charging Cable",
+      "category": "Accessories",
+      "brand": "MI",
+      "image": "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Cables%20and%20Connectors/Images/232509_0_brzdf6.png?tr=w-600",
+      "price": 299,
+      "rating": 4.2,
+      "quantity": 1,
+      "description": "A charger is an electrical device that converts main power into the appropriate."
+    },
+    {
+      "id": "11",
+      "title": "Sony Bluetooth Speaker",
+      "category": "Speakers",
+      "brand": "Sony",
+      "image": "https://rukminim2.flixcart.com/image/480/640/xif0q/speaker/party-speaker/9/d/f/apollo-one-20w-bluetooth-portable-speaker-with-wireless-karaoke-original-imahgqsar5tbwebj.jpeg?q=90",
+      "price": 2599,
+      "rating": 4.4,
+      "quantity": 1,
+      "description": "As a device, speakers are transducers which can connect wirelessly via Bluetooth or through a wired."
+    },
+    {
+      "id": "12",
+      "image": "https://media.ldlc.com/r1600/ld/products/00/06/01/77/LD0006017738.jpg",
+      "title": "sdkjbdb",
+      "brand": "vddsf",
+      "category": "Headphones",
+      "rating": 4,
+      "price": 6987,
+      "quantity": 1,
+      "description": "dbvnndsnfndgjbfndfsds"
+    }
+  ]
+}
